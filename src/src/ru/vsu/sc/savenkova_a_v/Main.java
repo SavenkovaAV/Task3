@@ -15,13 +15,9 @@ public class Main {
                 new Line(-2, 1), new Rectangle(0, -1, 10, 3),
                 new Rectangle(-6, -4, -4, 2));
 
-        Test test = new Test();
-
-        if (!test.doTest(picture)) {
-            System.out.println("The program does not work.");
-        } else {
-            System.out.println("The program works correctly.");
-            return;
+        if (Test.doTest(picture)) {
+            printPointsInEachArea(picture);
+            System.out.println("Test completed.");
         }
 
         System.out.print("Input х:");
